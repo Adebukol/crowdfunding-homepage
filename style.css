@@ -294,18 +294,13 @@ label{
   font-size: 16px;
   margin-right: 20px;
 } */
-
-label:hover{
-  color: hsl(176, 50%, 47%);
-  cursor: pointer;
-}
 .radio-btn span{
   color: hsl(176, 50%, 47%);
   font-weight: 600;
   margin-left: 20px;
 }
 .radio-btn h3{
-  margin-left: 50%;
+  margin-left: 40%;
   font-size: 14px;
   
 }
@@ -313,19 +308,20 @@ label:hover{
   margin-left: 5px;
   font-size: 12px;
 }
-.modal .active{
-  border: 2px solid hsl(176, 50%, 47%);
+.modal:hover{
+  border: 3px solid hsl(176, 50%, 47%);
 }
 input{
   margin-right: 20px;
   width: 25px;
   height:25px;
 }
-.row.pledge{
+
+/* #mypledge{
   display: none;
-}
+} */
 .pledge{
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   /* visibility: hidden; */

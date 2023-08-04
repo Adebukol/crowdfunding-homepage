@@ -15,10 +15,20 @@ closeModal.onclick =function(){
 //   document.querySelector(".pledge").style.display = "block";
 //   document.querySelector('.modal').classList.toggle("active");
 // }
+const radioBtn = document.getElementsByTagName("INPUT");
+const pledge = document.querySelectorAll('.pledge');
+console.log(pledge);
+const pledgeLine = document.getElementsByClassName('pledge-line')
+    
+document.addEventListener('click', function(e) {
+  if (!e.target.matches('#bamboo, #black, #mahogany')) return;
+  //your code here
+  // pledgeLine.style.display="block"
+  pledge.style.display="block";
+  
+});
   function myFunction() {
-    const x = document.getElementById("modal").querySelectorAll(".radio-btn");
-    const pledge = document.querySelectorAll('.pledge');
-    pledge.style.display="block";
+    
     // x[0].style.backgroundColor = "red";
 
   }
