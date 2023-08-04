@@ -362,7 +362,7 @@ input{
 }
 /* --------Support---------------- */
 .container-2{
-  visibility: hidden;
+  display: none;
 }
 .support{
   background-color: hsl(0, 0%, 100%);
