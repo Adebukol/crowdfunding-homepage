@@ -25,8 +25,33 @@ document.addEventListener('click', function(e) {
   //your code here
   // pledgeLine.style.display="block"
   pledge.style.display="block";
+
   
 });
+const bookDiv = document.getElementsByClassName('bk-img')
+const bookMark = document.getElementById('bookmark');
+bookMark.onclick = function(){
+  bookMark.textContent ="Bookmarked";
+  bookMark.style.color ="hsl(176, 50%, 47%)";
+  bookDiv.style.background = "hsl(176, 50%, 47%)";
+}
+
+const openMenu = document.getElementById('openNav');
+const closeMenu = document.getElementById('close_list');
+const ulList = document.getElementById("ul_list");
+console.log(ulList);
+
+function openNav(){
+ulList.style.display ="block";
+openMenu.style.display = "none";
+closeMenu.style.display ="block";
+}
+closeMenu.onclick = function(){
+  ulList.style.display = "none";
+  openMenu.style.display = "block";
+  closeMenu.style.display ="none";
+}
+
   function myFunction() {
     
     // x[0].style.backgroundColor = "red";

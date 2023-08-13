@@ -39,6 +39,9 @@ body{
 .header nav{
   align-items: center;
 }
+.close-btn{
+  display: none;
+}
 nav ul li{
   list-style: none;
   display: inline-block;
@@ -360,6 +363,9 @@ input{
   justify-content: flex-end;
   margin-left: 40px;
 }
+.line{
+  display: none;
+}
 /* --------Support---------------- */
 .container-2{
   display: none;
@@ -382,7 +388,6 @@ input{
 
 
 @media screen and (max-width:800px) {
-
   .menu{
     display: block;
   }
@@ -391,12 +396,35 @@ input{
     max-width: 100%;
     min-width: fit-content;
     background-size: cover;
-    /* height: 50vh; */
-    top: 0;
-    
+    height: 30vh;
+    top: 0; 
   }
   nav{
     display: none;
+    background: hsl(0, 0%, 100%);
+    width: 90%;
+    position: absolute;
+    top: 70px;
+    height: 30%;
+    z-index: 1;
+    border-radius: 15px;
+    border-bottom: 1px solid hsl(0, 0%, 48%);
+  }
+  .line{
+    display: block;
+    width: 100%;
+  }
+  nav ul li{
+    display: block;
+    text-align: left;
+    margin: 20px;
+    margin-top: 40px;
+  }
+    nav ul li a{
+    color: #000;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
   }
   .header{
     padding: 20px 20px;
@@ -413,8 +441,6 @@ input{
   .heading-text{
     font-size: 13px;
   }
-  
-
   .small-container{
     display: flex;
     flex-direction: column;
@@ -423,7 +449,7 @@ input{
     margin:  auto;
     position: absolute;
     align-items: center;
-    top: 250px;
+    top: 200px;
     left: 0%;
     background-color: #ffffff1f;
    }
