@@ -289,10 +289,7 @@ letter-spacing: 0.5px;
   /* align-items: flex-start;
   justify-content: flex-start; */
 }
-label{
-  font-weight: 700;
-  font-size: 14px;
-}
+
 /*.radio-btn h2{
   font-size: 16px;
   margin-right: 20px;
@@ -311,17 +308,25 @@ label{
   margin-left: 5px;
   font-size: 12px;
 }
-.modal:hover{
+/* .modal:hover{
   border: 3px solid hsl(176, 50%, 47%);
+} */
+label{
+  font-weight: 700;
+  font-size: 14px;
 }
-input{
+label:hover{
+color: hsl(176, 50%, 47%);
+}
+input[type="radio"]{
+  /* accent-color: hsl(176, 50%, 47%); */
   margin-right: 20px;
   width: 25px;
   height:25px;
-}
-input:hover{
-  border: 3px solid hsl(176, 50%, 47%);
-}
+  border: #fff;
+  }
+
+
 /* #mypledge{
   display: none;
 } */

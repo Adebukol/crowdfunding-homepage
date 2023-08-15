@@ -16,18 +16,24 @@ closeModal.onclick =function(){
 //   document.querySelector('.modal').classList.toggle("active");
 // }
 const radioBtn = document.getElementsByTagName("INPUT");
-const pledge = document.querySelectorAll('.pledge');
+// const showPledge = document.querySelectorAll('.modal');
+// console.log(showPledge);
+const pledge = document.getElementById('mypledge');
 console.log(pledge);
-const pledgeLine = document.getElementsByClassName('pledge-line')
-    
-document.addEventListener('click', function(e) {
-  if (!e.target.matches('#bamboo, #black, #mahogany')) return;
-  //your code here
-  // pledgeLine.style.display="block"
-  pledge.style.display="block";
+const pledgeLine = document.getElementsByClassName('pledge-line');
+    console.log(pledgeLine);
+// pledge.addEventListener('click', function(e) {
+//   if (!e.target.matches('#bamboo, #black, #mahogany'))
+//   //your code here
+//   // pledge.style.display ="block";
+//   // pledgeLine.style.display = "block";
+//   console.log("clicked");
+// })
+function showPledge(){
+  pledge.style.display ="block";
+  pledgeLine.style.display = "block";
+}
 
-  
-});
 const showBookmark = document.getElementById('showBookmark');
 const bookDiv = document.getElementById('bookImg');
 const bookMark = document.getElementById('bookmark');
