@@ -353,6 +353,10 @@ input[type="radio"]{
   font-weight: 700;
   width: 100px;
 }
+.pledge-btn:hover{
+  border: 1px solid hsl(176, 50%, 47%);
+  cursor: pointer;
+}
 .confirm-btn{
     padding: 15px 30px;
     border-radius: 25px;
@@ -363,6 +367,10 @@ input[type="radio"]{
     margin-left: 20px;
     font-size: 12px;
     font-weight: 700;
+  }
+  .confirm-btn:hover{
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
   }
 
 .pledge-end{
@@ -560,6 +568,10 @@ input[type="radio"]{
   /* .mobile{
     position: fixed;
   } */
+  .modal{
+    /* height: 350px; */
+    min-height:320px;
+  }
   .bamboo{
     height: 300px;
   }
@@ -567,7 +579,7 @@ input[type="radio"]{
     height: 250px;
   }
   .overlay{
-    height: 1250px;
+    /* height: ; */
     top: 80px;
     margin: 0px;
     left:0px ;
@@ -613,8 +625,8 @@ input[type="radio"]{
     margin-left: 35px;
     margin-top: 0px;
   }
-  input{
-    margin-right: 10px;
+  input[type="radio"]{
+    margin-right: 7px;
   }
  
   .edition-row p{
@@ -630,14 +642,18 @@ input[type="radio"]{
   .pledge{
     display: none;
   }
-  .pledge-text{
-    font-size: 14px;
+  .row .pledge-text{
+    font-size: 12px;
     margin-top: 0px;
+    margin-bottom: 5px;
   }
   .pledge-line{
     margin-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 100%;
+  }
+  .pledge-end{
+    margin-bottom: 10px;
   }
   .pledge-btn{
     padding: 10px 25px 15px 10px;

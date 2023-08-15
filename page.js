@@ -9,38 +9,33 @@ projectButton.onclick = function(){
 closeModal.onclick =function(){
     document.getElementById("modalPage").style.display = "none"; 
 }
-// openPledge.onclick= function(){
-//   console.log("checked")
-//   document.querySelector(".pledge-line").style.display = "block";
-//   document.querySelector(".pledge").style.display = "block";
-//   document.querySelector('.modal').classList.toggle("active");
-// }
+
 const radioBtn = document.getElementsByTagName("INPUT");
-// const showPledge = document.querySelectorAll('.modal');
-// console.log(showPledge);
+const pledgeBamboo = document.getElementById('bambooPledge');
 const pledge = document.getElementById('mypledge');
-console.log(pledge);
-const pledgeLine = document.getElementsByClassName('pledge-line');
-    console.log(pledgeLine);
-// pledge.addEventListener('click', function(e) {
-//   if (!e.target.matches('#bamboo, #black, #mahogany'))
-//   //your code here
-//   // pledge.style.display ="block";
-//   // pledgeLine.style.display = "block";
-//   console.log("clicked");
-// })
+const pledgeLine = document.getElementById('line1');
+const pledgeLine1 = document.getElementById('line2');
+const pledgeLine2 = document.getElementById('line3');
+function viewPledge(){
+  pledgeBamboo.style.display ="block";
+ pledgeLine.style.display = "block";
+}
 function showPledge(){
   pledge.style.display ="block";
-  pledgeLine.style.display = "block";
+  pledgeLine1.style.display = "block";
 }
 
+const support = document.querySelectorAll('.confirm-btn');
+const supportPage = document.getElementById('supportPage');
+support.onclick = function(){
+supportPage.style.display = "block";
+}
 const showBookmark = document.getElementById('showBookmark');
 const bookDiv = document.getElementById('bookImg');
 const bookMark = document.getElementById('bookmark');
 showBookmark.onclick = function(){
   bookMark.textContent ="Bookmarked";
   bookDiv.src= "images/icon-bookmark-active.svg";
-  //bookDiv.style.right ="145px";
   bookMark.style.fontWeight ="700";
   bookMark.style.fontSize ="12px";
   bookMark.style.color = "hsl(176, 50%, 47%)";

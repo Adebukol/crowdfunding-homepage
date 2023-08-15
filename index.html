@@ -117,7 +117,7 @@
     <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
     you will be signed up to receive product updates via email.</p>
   </div>
-  <div class="edition-row modal bamboo" id="modal" onclick="showPledge()">
+  <div class="edition-row modal bamboo" id="modal" onclick="viewPledge()">
     <div class="radio-btn">
       <input type="radio" id="bamboo" name="pledge" value="Bamboo">
       <label for="bamboo">Bamboo Stand</label>
@@ -126,8 +126,8 @@
     </div>
     <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
     </p>
-    <hr class="pledge-line">
-    <div class="row pledge"><p class="pledge-text">Enter your pledge</p><div class="pledge-end"><button class="pledge-btn">$200</button><button class="confirm-btn">Confirm</button>
+    <hr class="pledge-line" id="line1">
+    <div class="row pledge" id="bambooPledge"><p class="pledge-text">Enter your pledge</p><div class="pledge-end"><button class="pledge-btn">$200</button><button class="confirm-btn">Confirm</button>
     </div>
   </div>
   </div>
@@ -141,7 +141,7 @@
     </div>
     <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
       member list. Shipping is included.</p>
-      <hr class="pledge-line">
+      <hr class="pledge-line" id="line2">
       <div class="row pledge" id="mypledge"><p class="pledge-text">Enter your pledge</p><div class="pledge-end"><button class="pledge-btn">$200</button><button class="confirm-btn">Confirm</button></div></div>
     </div>
 
@@ -154,7 +154,7 @@
     </div>
     <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
       to our Backer member list. Shipping is included.</p>
-        <hr class="pledge-line">
+        <hr class="pledge-line" id="line3">
         <div class="row pledge"><p class="pledge-text">Enter your pledge</p><div class="pledge-end"><button class="pledge-btn">$200</button><button class="confirm-btn">Confirm</button></div></div>
     </div>
   </div>
@@ -162,7 +162,7 @@
   <!-- Selection modal end -->
 
   <!-- Success modal start -->
-<div class="container-2">
+<div class="container-2" id="supportPage">
   <div class="support">
   <img src="images/icon-check.svg" alt="" class="check">
   <h1 class="support-head">Thanks for your support!
