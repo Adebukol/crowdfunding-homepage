@@ -28,12 +28,16 @@ document.addEventListener('click', function(e) {
 
   
 });
-const bookDiv = document.getElementsByClassName('bk-img')
+const showBookmark = document.getElementById('showBookmark');
+const bookDiv = document.getElementById('bookImg');
 const bookMark = document.getElementById('bookmark');
-bookMark.onclick = function(){
+showBookmark.onclick = function(){
   bookMark.textContent ="Bookmarked";
-  bookMark.style.color ="hsl(176, 50%, 47%)";
-  bookDiv.style.background = "hsl(176, 50%, 47%)";
+  bookDiv.src= "images/icon-bookmark-active.svg";
+  //bookDiv.style.right ="145px";
+  bookMark.style.fontWeight ="700";
+  bookMark.style.fontSize ="12px";
+  bookMark.style.color = "hsl(176, 50%, 47%)";
 }
 
 const openMenu = document.getElementById('openNav');
