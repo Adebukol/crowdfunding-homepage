@@ -1,7 +1,7 @@
 const projectButton = document.getElementById("projectBtn");
 const closeModal = document.querySelector(".close-modal");
 const openPledge = document.querySelector('.radio-btn');
-console.log(openPledge);
+const modalHeight = document.querySelectorAll('.modal')
 projectButton.onclick = function(){
   document.getElementById("modalPage").style.display = "block";
 }
@@ -19,16 +19,29 @@ const pledgeLine2 = document.getElementById('line3');
 function viewPledge(){
   pledgeBamboo.style.display ="block";
  pledgeLine.style.display = "block";
+ modalHeight.forEach(btn =>{
+  btn.classList.toggle('height');
+ });
 }
 function showPledge(){
   pledge.style.display ="block";
   pledgeLine1.style.display = "block";
+  modalHeight.forEach(btn =>{
+    btn.classList.toggle('height');
+   });
 }
 
-const support = document.querySelectorAll('.confirm-btn');
+const confirmBtn = document.querySelectorAll('.confirm-btn');
 const supportPage = document.getElementById('supportPage');
-support.onclick = function(){
-supportPage.style.display = "block";
+confirmBtn.forEach((btn =>{
+  btn.addEventListener('click', ()=> {
+    supportPage.style.display = "block";
+    document.getElementById("modalPage").style.display = "none"; 
+  });
+}));
+const supportClose= document.getElementById('supportClose');
+supportClose.onclick = function(){
+  supportPage.style.display = "none";
 }
 const showBookmark = document.getElementById('showBookmark');
 const bookDiv = document.getElementById('bookImg');
