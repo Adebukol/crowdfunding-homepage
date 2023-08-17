@@ -55,13 +55,9 @@ nav ul li a{
   cursor: pointer;
 }
 .small-container{
-  width: 900px;
-  margin: auto;
-  /* padding:0px 50px; */
+  margin: auto 300px;
   position: absolute;
   top: 350px;
-  left: 20%;
-  /* background-color: #fff; */
 }
 .ms-logo{
   top: -30px;
@@ -416,6 +412,11 @@ input[type="radio"]{
 }
 
 
+@media (max-width: 1024px) {
+  .small-container{
+    margin: auto 100px;
+  } 
+}
 
 
 
