@@ -314,14 +314,14 @@ label{
 label:hover{
 color: hsl(176, 50%, 47%);
 }
-input[type="radio"]{
-  /* accent-color: hsl(176, 50%, 47%); */
+input{
+  accent-color: hsl(176, 50%, 47%);
   margin-right: 20px;
   width: 25px;
   height:25px;
-  border: #fff;
+  border-color: #fff;
   }
-
+  
 
 /* #mypledge{
   display: none;

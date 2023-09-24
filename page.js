@@ -16,6 +16,13 @@ const pledge = document.getElementById('mypledge');
 const pledgeLine = document.getElementById('line1');
 const pledgeLine1 = document.getElementById('line2');
 const pledgeLine2 = document.getElementById('line3');
+
+// radioBtn.addEventListener('change', function() {
+//   if (this.checked) {
+//     // Add your custom logic here
+//   }
+// });
+
 function viewPledge(){
   pledgeBamboo.style.display ="block";
  pledgeLine.style.display = "block";
@@ -30,13 +37,26 @@ function showPledge(){
     btn.classList.toggle('height');
    });
 }
-
+const totalBacked = document.getElementById('backed');
+const backers = document.getElementById('backers');
+const pledgeBtn = document.getElementsByClassName('pledge-btn');
+console.log(pledgeBtn);
 const confirmBtn = document.querySelectorAll('.confirm-btn');
 const supportPage = document.getElementById('supportPage');
+const backedEl = document.getElementById('backed');
+console.log(backedEl.textContent)
+
+
 confirmBtn.forEach((btn =>{
   btn.addEventListener('click', ()=> {
     supportPage.style.display = "block";
     document.getElementById("modalPage").style.display = "none"; 
+    
+    backedEl.innerText ++
+    // parseFloat(cartPrice.innerText.replace('$', ''))
+    //console.log(increaseBackers);
+    // totalBacked.textContent + pledgeBtn[0].textContent;
+    // backers.textContent + 1;
   });
 }));
 const supportClose= document.getElementById('supportClose');
