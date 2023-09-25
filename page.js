@@ -40,26 +40,25 @@ function showPledge(){
 const totalBacked = document.getElementById('backed');
 const backers = document.getElementById('backers');
 const pledgeBtn = document.getElementsByClassName('pledge-btn');
-console.log(pledgeBtn);
 const confirmBtn = document.querySelectorAll('.confirm-btn');
 const supportPage = document.getElementById('supportPage');
 const backedEl = document.getElementById('backed');
-//console.log(backedEl.textContent)
+console.log(backedEl.textContent)
 
 
 confirmBtn.forEach((btn =>{
   btn.addEventListener('click', ()=> {
     supportPage.style.display = "block";
     document.getElementById("modalPage").style.display = "none"; 
-    var newBacked = backedEl.innerText
-    console.log(newBacked);
     
-    parseFloat(newBacked.innerText.replace('$', ''))
+    backedEl.innerText ++
+    // parseFloat(cartPrice.innerText.replace('$', ''))
     //console.log(increaseBackers);
     // totalBacked.textContent + pledgeBtn[0].textContent;
     // backers.textContent + 1;
   });
 }));
+
 const supportClose= document.getElementById('supportClose');
 supportClose.onclick = function(){
   supportPage.style.display = "none";
