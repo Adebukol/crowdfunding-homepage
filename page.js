@@ -40,25 +40,33 @@ function showPledge(){
 const totalBacked = document.getElementById('backed');
 const backers = document.getElementById('backers');
 const pledgeBtn = document.getElementsByClassName('pledge-btn');
-console.log(pledgeBtn);
 const confirmBtn = document.querySelectorAll('.confirm-btn');
 const supportPage = document.getElementById('supportPage');
-const backedEl = document.getElementById('backed');
-console.log(backedEl.textContent)
 
 
 confirmBtn.forEach((btn =>{
   btn.addEventListener('click', ()=> {
     supportPage.style.display = "block";
     document.getElementById("modalPage").style.display = "none"; 
-    
-    backedEl.innerText ++
-    // parseFloat(cartPrice.innerText.replace('$', ''))
-    //console.log(increaseBackers);
-    // totalBacked.textContent + pledgeBtn[0].textContent;
-    // backers.textContent + 1;
+
+    // get the pledge amount from the amount element beside the confirm btn
+    // remove the commas and the dollar sign
+    pledgeAmount = parseInt(btn.previousElementSibling.innerText.replace(/\$|,/g, ''))
+    currentTotal = parseInt(totalBacked.innerText.replace(/\$|,/g, ''))
+
+    total = currentTotal + pledgeAmount
+    formattedTotal  =total.toLocaleString() // format to add commas
+    totalBacked.innerText = `$${formattedTotal}` // update the total backed with the new ammount
+
+    currentBackers = backers.innerText.replace(/,/g, '')
+    currentBackers ++ // update the number of backers
+
+    formattedBackers = currentBackers.toLocaleString()
+    backers.innerText = formattedBackers
+
   });
 }));
+
 const supportClose= document.getElementById('supportClose');
 supportClose.onclick = function(){
   supportPage.style.display = "none";
