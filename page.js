@@ -44,16 +44,17 @@ console.log(pledgeBtn);
 const confirmBtn = document.querySelectorAll('.confirm-btn');
 const supportPage = document.getElementById('supportPage');
 const backedEl = document.getElementById('backed');
-console.log(backedEl.textContent)
+//console.log(backedEl.textContent)
 
 
 confirmBtn.forEach((btn =>{
   btn.addEventListener('click', ()=> {
     supportPage.style.display = "block";
     document.getElementById("modalPage").style.display = "none"; 
+    var newBacked = backedEl.innerText
+    console.log(newBacked);
     
-    backedEl.innerText ++
-    // parseFloat(cartPrice.innerText.replace('$', ''))
+    parseFloat(newBacked.innerText.replace('$', ''))
     //console.log(increaseBackers);
     // totalBacked.textContent + pledgeBtn[0].textContent;
     // backers.textContent + 1;
@@ -89,16 +90,3 @@ closeMenu.onclick = function(){
   openMenu.style.display = "block";
   closeMenu.style.display ="none";
 }
-
-  function myFunction() {
-    
-    // x[0].style.backgroundColor = "red";
-
-  }
-
-{/* <input type="radio" id="html" name="fav_language" value="HTML">
- 
-<input type="radio" id="css" name="fav_language" value="CSS">
-<label for="css">CSS</label><br>
-<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-<label for="javascript">JavaScript</label> */}
